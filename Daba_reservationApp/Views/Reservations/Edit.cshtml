@@ -1,0 +1,32 @@
+﻿@model Reservations
+
+<h1 class="text-center m-5">Edit Reservations</h1>
+
+<h1>Create new resevation</h1>
+<form method="post" asp-action="Edit">
+
+    <input asp-for="Id" hidden />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" type"text" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Date" class="form-label"></label>
+        <input asp-for="Date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="People" class="form-label"></label>
+        <input asp-for="People" type"number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" type"text" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+
+</form>

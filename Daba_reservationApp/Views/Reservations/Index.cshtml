@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Reservations>
+@{
+}
+
+<h1 class="text-center m-5">Reservations</h1>
+
+<table class="table table-striped">
+
+	<thead>
+		<tr>
+			 <th>Name</th>
+			 <th>Date</th>
+			 <th>People</th>
+			 <th>Phone</th>
+			 <th>Actions</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var reservation in Model)
+		{
+			<tr>
+				<td>@reservation.Name</td>
+				<td>@reservation.Date</td>
+				<td>@reservation.People</td>
+				<td>@reservation.Phone</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@reservation.Id" class="btn btn-sm btn-warning">Edit</a>
+					<a asp-action="Delete" asp-route-id="@reservation.Id" class="btn btn-sm btn-danger">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+
+</table>
